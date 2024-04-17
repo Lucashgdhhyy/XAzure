@@ -67,6 +67,19 @@ local Button = Tab:CreateButton({
    end,
 })
 
+local Button = Tab:CreateButton({
+   Name = "W-Azure",
+   Interact = 'Click',
+   Callback = function()                               getgenv().Team = "Pirates"
+getgenv().AutoLoad = false --Will Load Script On Server Hop
+getgenv().SlowLoadUi  = false
+getgenv().ForceUseSilentAimDashModifier = false --Force turn on silent aim , if error then executor problem
+getgenv().ForceUseWalkSpeedModifier = false --Force turn on Walk Speed Modifier , if error then executor problem
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/3b2169cf53bc6104dabe8e19562e5cc2.lua"))()
+   -- The function that takes place when the button is pressed
+   end,
+})
+
 local Tab = Window:CreateTab("Pet Simulator 99", 4483362458) -- Title, Image
 
 local Button = Tab:CreateButton({
