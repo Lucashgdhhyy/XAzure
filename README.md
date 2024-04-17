@@ -19,7 +19,7 @@ local Window = ArrayField:CreateWindow({
         KeySettings = {
             Title = "X Azure Key",
             Subtitle = "Key System",
-            Note = "Comming Soon WebSite",
+            Note = "Key in /discord.gg/wyJczWKzHG",
             FileName = "",
             SaveKey = true,
             GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like ArrayField to get the key from
@@ -89,7 +89,7 @@ local Tab = Window:CreateTab("Muncher Master", 4483362458) -- Title, Image
 local Button = Tab:CreateButton({
    Name = "Muncher Master",
    Interact = 'Click',
-   Callback = function()                    loadstring(game:HttpGet("https://raw.githubusercontent.com/Lucashgdhhyy/Muncj/main/README.md"))()
+   Callback = function()                   loadstring(game:HttpGet("https://raw.githubusercontent.com/Lucashgdhhyy/Muncj/main/README.md"))()   
    -- The function that takes place when the button is pressed
    end,
 })
