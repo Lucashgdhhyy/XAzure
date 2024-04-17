@@ -1,103 +1,105 @@
--- By BaconExility
-print("By BaconExility")
-warn("Idea server discord")
-local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-  local Window = OrionLib:MakeWindow({
-		Name = "X Azure Beta| V0.5",
-		HidePremium = false,
-		SaveConfig = true,
-		ConfigFolder = "X Azure Random Game:D",
-        IntroText = "Loading X Azure"       
-})
+local ArrayField = loadstring(game:HttpGet("https://raw.githubusercontent.com/Hosvile/Refinement/main/MC%3AArrayfield%20Library"))()
+--Documentation url: https://docs.sirius.menu/community/arrayfield
 
-local Tab = Window:MakeTab({
-	Name = "Main",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
-})
+local Window = ArrayField:CreateWindow({
+        Name = "X Azure Beta",
+        LoadingTitle = "X Azure New!",
+        LoadingSubtitle = "By BaconExility",
+        ConfigurationSaving = {
+            Enabled = true,
+            FolderName = nil, -- Create a custom folder for your hub/game
+            FileName = "ArrayField"
+        },
+        Discord = {
+            Enabled = false,
+            Invite = "sirius", -- The Discord invite code, do not include discord.gg/
+            RememberJoins = true -- Set this to false to make them join the discord every time they load it up
+        },
+        KeySystem = true, -- Set this to true to use our key system
+        KeySettings = {
+            Title = "X Azure Key",
+            Subtitle = "Key System",
+            Note = "Comming Soon WebSite",
+            FileName = "",
+            SaveKey = true,
+            GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like ArrayField to get the key from
+            Key = {"XAzure",'Bye'},
+            Actions = {
+                [1] = {
+                    Text = 'Click here to copy the key link',
+                    OnPress = function()
 
-Tab:AddParagraph("Loading All Wait 3 secounds for load all","Wait the search box for use script")
-wait(3)
-OrionLib:MakeNotification({
-	Name = "Loading Hub",
-	Content = "Sucefull for loading All",
-	Image = "rbxassetid://4483345998",
-	Time = 5
-})
-
-Tab:AddParagraph("Hello!","Thank you for use my hub")
-
-Tab:AddTextbox({
-	Name = "Notepad",
-	Default = "X Azure on top",
-	TextDisappear = false,
-	Callback = function(Value)
-		warn(Value)
-	end	  
-})
-
-Tab:AddButton({
-	Name = "Destoy Ui",
-	Callback = function()         OrionLib:Destroy()
-      		print("Deleting Ui")                 
-  	end    
-})
+                    end,
+                }
+            },
+        }
+    })
 
 
-OrionLib:Init()
+local Tab = Window:CreateTab("Main", 4483362458) -- Title, Image
 
-local Tab2 = Window:MakeTab({
-	Name = "Blox Fruit",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
-})
-
-local Tab3 = Window:MakeTab({
-	Name = "Pet Simulator 99",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
-})
-
-local Tab4 = Window:MakeTab({
-	Name = "Blade Ball",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
-})
-
-Tab4:AddButton({
-	Name = "Bedol Hub",
-	Callback = function()
-      		print("button pressed")            _G.UI_Size = 200 -- config ui size
-loadstring(game:HttpGet("https://raw.githubusercontent.com/3345-c-a-t-s-u-s/-beta-/main/AutoParry.lua"))() 
-  	end    
+ArrayField:Notify({
+   Title = "X Azure",
+   Content = "X Azure Now In The new era ",
+   Duration = 6.5,	
+   Image = 4483362458,
+   Actions = { -- Notification Buttons
+      Ignore = {
+         Name = "Okay!",
+         Callback = function()
+         print("The user tapped Okay!")
+      end
+   },
+ },
 })
 
 
-Tab2:AddButton({
-	Name = "Redz Hub",
-	Callback = function()
-      		print("button pressed")                 loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/BloxFruits/main/redz9999"))()
-  	end    
+local Section = Tab:CreateSection("Wait 4 Seconds for load all",false)
+
+local Tab = Window:CreateTab("Blox Fruit", 4483362458) -- Title, Image
+
+local Button = Tab:CreateButton({
+   Name = "Redz Hub",
+   Interact = 'Click',
+   Callback = function()              loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/BloxFruits/main/redz9999"))()
+   end,
 })
 
-local Tab5 = Window:MakeTab({
-	Name = "Admins CMDS",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
+local Tab = Window:CreateTab("Pet Simulator 99", 4483362458) -- Title, Image
+
+local Button = Tab:CreateButton({
+   Name = "Redz Hub",
+   Interact = 'Click',
+   Callback = function()              loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/PetSimulator99/main/redz9999.lua"))()
+   end,
 })
 
+local Tab = Window:CreateTab("Blade Ball", 4483362458) -- Title, Image
 
-Tab3:AddButton({
-	Name = "Redz hub",
-	Callback = function()
-      		print("button pressed")         loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/PetSimulator99/main/redz9999.lua"))()
-  	end    
+local Button = Tab:CreateButton({
+   Name = "Bedol Hub",
+   Interact = 'Click',
+   Callback = function()                                    _G.UI_Size = 200 -- config ui size
+loadstring(game:HttpGet("https://raw.githubusercontent.com/3345-c-a-t-s-u-s/-beta-/main/AutoParry.lua"))()
+   end,
 })
 
-Tab5:AddButton({
-	Name = "Infinity Yield",
-	Callback = function()
-      		print("button pressed")                 loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
-  	end    
+local Tab = Window:CreateTab("Muncher Master", 4483362458) -- Title, Image
+
+local Button = Tab:CreateButton({
+   Name = "Muncher Master",
+   Interact = 'Click',
+   Callback = function()                    loadstring(game:HttpGet("https://raw.githubusercontent.com/Lucashgdhhyy/Muncj/main/README.md"))()
+   -- The function that takes place when the button is pressed
+   end,
 })
 
+local Tab = Window:CreateTab("Cmds Admin", 4483362458) -- Title, Image
+
+local Button = Tab:CreateButton({
+   Name = "Infinity Yield",
+   Interact = 'Click',
+   Callback = function()               loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
+   -- The function that takes place when the button is pressed
+   end,
+})
