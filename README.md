@@ -55,8 +55,11 @@ ArrayField:Notify({
  },
 })
 
-
 local Section = Tab:CreateSection("Wait 4 Seconds for load all",false)
+
+local Section = Tab:CreateSection("Hello! Welcome to my hub",false)
+
+local Section = Tab:CreateSection("i will make a orion library version:D",false)
 
 local Tab = Window:CreateTab("Blox Fruit", 4483362458) -- Title, Image
 
