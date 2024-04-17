@@ -1,4 +1,6 @@
 local ArrayField = loadstring(game:HttpGet("https://raw.githubusercontent.com/Hosvile/Refinement/main/MC%3AArrayfield%20Library"))()
+ArrayField:Destroy()
+local ArrayField = loadstring(game:HttpGet("https://raw.githubusercontent.com/Hosvile/Refinement/main/MC%3AArrayfield%20Library"))()
 --Documentation url: https://docs.sirius.menu/community/arrayfield
 
 local Window = ArrayField:CreateWindow({
